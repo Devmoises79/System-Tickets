@@ -19,17 +19,17 @@ print("4- Afonso Padilha")
 print("===================================\n")
 
 while True:
-    cantor = input("======= Digite o número da atração: ")
-    if cantor == "1":
+    comediante = input("======= Digite o número da atração: ")
+    if comediante == "1":
         cantor_nome = "Whindersson Nunes"
         break
-    elif cantor == "2":
+    elif comediante == "2":
         cantor_nome = "Tiago Ventura"
         break
-    elif cantor == "3":
+    elif comediante == "3":
         cantor_nome = "Rafael Portugal"
         break
-    elif cantor == "4":
+    elif comediante == "4":
         cantor_nome = "Afonso Padilha"
         break
     else:
