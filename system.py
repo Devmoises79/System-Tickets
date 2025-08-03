@@ -21,16 +21,16 @@ print("===================================\n")
 while True:
     comediante = input("======= Digite o número da atração: ")
     if comediante == "1":
-        cantor_nome = "Whindersson Nunes"
+        comediante_nome = "Whindersson Nunes"
         break
     elif comediante == "2":
-        cantor_nome = "Tiago Ventura"
+        comediante_nome = "Tiago Ventura"
         break
     elif comediante == "3":
-        cantor_nome = "Rafael Portugal"
+        comediante_nome = "Rafael Portugal"
         break
     elif comediante == "4":
-        cantor_nome = "Afonso Padilha"
+        comediante_nome = "Afonso Padilha"
         break
     else:
         print("❌ Opção inválida. Por favor, escolha de 1 a 4.")
