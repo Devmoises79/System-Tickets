@@ -1,15 +1,22 @@
-print("====== SISTEMA DE INGRESSOS =======")
-print(" ")
-print("===================================")
-print("")
-print("Bem vindo ao nosso espetáculo! Vambora que hoje vai ser muito legal!")
-print("")
-nome = input("======= Digite o seu nome: ")
-print("")
-print(f"Que legal ter você por aqui, {nome}! Desejamos um ótimo espetáculo!\n")
+import re
+
+print("====== SISTEMA DE INGRESSOS =======\n")
+print("===================================\n")
+print("Bem vindo ao nosso espetáculo! Vambora que hoje vai ser muito legal!\n")
+
+# Etapa 0 – NOME (com validação)
+while True:
+    nome = input("======= Digite o seu nome: ").strip()
+    # Regex: ^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$ → aceita letras maiúsculas, minúsculas, acentos e espaços
+    if re.match(r"^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$", nome):
+        break
+    else:
+        print("❌ Nome inválido. Digite apenas letras (pode incluir espaços).")
+
+print(f"\nQue legal ter você por aqui, {nome}! Desejamos um ótimo espetáculo!\n")
 print("===================================\n")
 
-# Etapa 1 – ATRAÇÃO (com validação)
+# Etapa 1 – ATRAÇÃO
 print("Vamos às atrações da noite!\n")
 print("===================================")
 print("1- Whindersson Nunes")
@@ -35,7 +42,7 @@ while True:
     else:
         print("❌ Opção inválida. Por favor, escolha de 1 a 4.")
 
-# Etapa 2 – INGRESSO (com validação)
+# Etapa 2 – INGRESSO
 print("\nAgora vamos ao tipo de ingresso!\n")
 print("===================================")
 print("1- Básico (R$80)")
@@ -60,7 +67,7 @@ while True:
     else:
         print("❌ Opção inválida. Escolha 1, 2 ou 3.")
 
-# Etapa 3 – PAGAMENTO (com validação)
+# Etapa 3 – PAGAMENTO
 print("\nAgora vamos ao pagamento!\n")
 print("===================================")
 print("1- Dinheiro (5% de desconto)")
@@ -108,7 +115,7 @@ total -= total * cupom_desconto
 print("\nResumo da compra:")
 print(f"Nome: {nome}")
 print(f"Ingresso: {ingresso_nome} - R${preco:.2f}")
-print(f"Atração escolhida: {ingresso_nome}")
+print(f"Atração escolhida: {comediante_nome}")
 print(f"Forma de pagamento: {pagamento_nome}")
 print(f"Valor final a pagar: R${total:.2f}")
 
@@ -123,4 +130,4 @@ while True:
         print("❌ Nota inválida. Digite um número de 1 a 5.")
 
 print(f"\nObrigado pela sua avaliação de {avaliacao} estrela(s)!")
-print("Aproveite o espetáculo! 🎉")
+print("Aproveite o espetáculo! ")
