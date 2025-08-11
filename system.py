@@ -108,7 +108,7 @@ total -= total * cupom_desconto
 print("\nResumo da compra:")
 print(f"Nome: {nome}")
 print(f"Ingresso: {ingresso_nome} - R${preco:.2f}")
-print(f"Atração escolhida: {cantor_nome}")
+print(f"Atração escolhida: {ingresso_nome}")
 print(f"Forma de pagamento: {pagamento_nome}")
 print(f"Valor final a pagar: R${total:.2f}")
 
